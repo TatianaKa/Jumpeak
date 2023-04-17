@@ -55,6 +55,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvSecondPass"/>
+    <TextView
+        android:id="@+id/tvChangePass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:visibility="invisible"
+        android:text="😔, Похоже, неправильно введен пароль"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSecondPass" />
 
     <Button
         android:id="@+id/btnCreateAccount"

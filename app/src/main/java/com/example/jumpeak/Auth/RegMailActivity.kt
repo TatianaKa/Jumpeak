@@ -45,33 +45,40 @@ class RegMailActivity : AppCompatActivity() {
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                etEmail.setBackgroundResource(R.drawable.shape_purple)
             }
         })
     }
     fun Next(email:String){
         val intent:Intent=Intent(this,RegFirstPassActivity::class.java)
         if(TextUtils.isEmpty(email)){
+            etEmail.setBackgroundResource(R.drawable.shape_red)
             Toast.makeText(this@RegMailActivity,"Empty value",Toast.LENGTH_SHORT).show()
-            etEmail.setOnFocusChangeListener{view, b -> etEmail.setBackgroundResource(R.drawable.shape_red)}
-           // etEmail.setBackgroundResource(R.drawable.shape_red)
         }
         else{
             db.collection("UnregistedUsers")
                 .whereEqualTo("email",email).get()
                 .addOnSuccessListener {
                     var result:StringBuffer=StringBuffer()
+                    var isReg:StringBuffer=StringBuffer()
+
                     for (document in it){
                         result.append(document.data.getValue("password"))
+                        isReg.append(document.data.getValue("isRegistred"))
                     }
                     if(TextUtils.isEmpty(result.toString())){
-                        etEmail.setOnFocusChangeListener{view, b -> etEmail.setBackgroundResource(R.drawable.shape_red)}
+                        etEmail.setBackgroundResource(R.drawable.shape_red)
+                        tvNotFound.setVisibility(View.VISIBLE)
+                    }
+                    else if(isReg.toString()=="true"){
+                        etEmail.setBackgroundResource(R.drawable.shape_red)
+                        tvNotFound.setText("данный аккаунт уже зарегистрирован")
                         tvNotFound.setVisibility(View.VISIBLE)
                     }
                     else{
-                        val user:User= User()
-                        user.login=result.toString()
                         tvNotFound.setVisibility(View.INVISIBLE)
-                        intent.putExtra("email",result.toString())
+                        intent.putExtra("email",email)
+                        intent.putExtra("pass", result.toString())
                         startActivity(intent)
                     }
                 }

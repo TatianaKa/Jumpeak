@@ -49,11 +49,19 @@
         android:fontFamily="@font/sfprodisplay"
         android:paddingLeft="3dp"
         android:background="@drawable/shape_grey"
-        android:backgroundTint="#F8F8F8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvEnterPass" />
-
+    <TextView
+        android:id="@+id/tvWrongPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:visibility="invisible"
+        android:text="😔, Похоже, неправильно введен пароль"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etFirstPass" />
     <Button
         android:id="@+id/btnFirstPass"
         android:layout_width="343dp"
