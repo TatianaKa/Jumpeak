@@ -7,43 +7,21 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/tvHello"
+        android:id="@+id/tvLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="30sp"
-        android:text="Привет \nЭто Jumpeak - место, где \nдейтятся студенты и работодатели"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvUse"
+        android:id="@+id/tvPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="28dp"
-        android:text="Уже пользовались \nприложением?"
         android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvHello" />
-
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="160dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="40dp"
-        android:text="войти"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btnReg"
-        android:layout_width="160dp"
-        android:layout_height="64dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="40dp"
-        android:text="зарегестрироваться"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tvLogin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

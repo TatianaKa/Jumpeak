@@ -40,8 +40,7 @@
         android:layout_marginBottom="40dp"
         android:text="войти"
         android:fontFamily="@font/sfprodisplay"
-        android:background="@drawable/shape_grey"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="@color/purple"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -53,9 +52,8 @@
         android:layout_marginBottom="40dp"
         android:text="Создать аккаунт"
         android:fontFamily="@font/sfprodisplay"
-        android:background="@drawable/shape_grey"
-        android:textColor="@color/black"
         android:backgroundTint="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,31 +11,33 @@ import com.example.jumpeak.databinding.ActivityRegSecondPassBinding
 import com.google.firebase.auth.FirebaseAuth
 
 class RegSecondPassActivity : AppCompatActivity() {
-    private lateinit var etEmail: EditText
-    private lateinit  var etPassword: EditText
+    private lateinit  var etPass: EditText
+    private lateinit var btnCreate: Button
+    private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reg_second_pass)
         supportActionBar?.hide();
-        val btnCreate=findViewById<Button>(R.id.btnCreateAccount)
-        btnCreate.setOnClickListener{createNewAccount()}
-        etPassword=findViewById(R.id.etSecondPass)
-
+        Init()
     }
-    fun createNewAccount() {
-        // if (!TextUtils.isEmpty(firstName) && !TextUtils.isEmpty(lastName)
-        //         && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password))
-        //if(etPassword.text.toString)
-        var mAuth= FirebaseAuth.getInstance()
-        mAuth.createUserWithEmailAndPassword(etEmail.text.toString(), etPassword.text.toString())
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
-                    Toast.makeText(this, "Сработало",
-                        Toast.LENGTH_SHORT).show()
-                } else {
-                    Toast.makeText(this, "Authentication failed.",
-                        Toast.LENGTH_SHORT).show()
+    private fun Init(){
+        etPass=findViewById(R.id.etSecondPass)
+        btnCreate=findViewById(R.id.btnCreateAccount)
+        auth= FirebaseAuth.getInstance()
+        etPass.setOnFocusChangeListener{view, b -> etPass.setBackgroundResource(R.drawable.shape_purple)}
+       // btnCreate.setOnClickListener { createNewAccount() }
+        //переделать цвет указателя?
+    }
+   /* fun createNewAccount() {
+            auth.createUserWithEmailAndPassword(etEmail.text.toString(), etPass.text.toString())
+                .addOnCompleteListener(this) { task ->
+                    if (task.isSuccessful) {
+                        Toast.makeText(this, "Сработало",
+                            Toast.LENGTH_SHORT).show()
+                    } else {
+                        Toast.makeText(this, "Authentication failed.",
+                            Toast.LENGTH_SHORT).show()
+                    }
                 }
-            }
-    }
+    }*/
 }

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "47575991629",
+    "firebase_url": "https://jumpeak-301b4-default-rtdb.firebaseio.com",
+    "project_id": "jumpeak-301b4",
+    "storage_bucket": "jumpeak-301b4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47575991629:android:8d1861123b932e76852304",
+        "android_client_info": {
+          "package_name": "com.example.jumpeak"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "47575991629-jgslccpfqgdge3orp8j7aaophcq05kru.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNRi4CDxEDcPZ-hI9gMsoJR44ctPOYtI0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "47575991629-jgslccpfqgdge3orp8j7aaophcq05kru.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

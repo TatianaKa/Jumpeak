@@ -35,26 +35,37 @@
         android:layout_width="343dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
+        android:hint="Email"
+        android:paddingLeft="3dp"
         android:background="@drawable/shape_grey"
-        android:backgroundTint="#F8F8F8"
         android:fontFamily="@font/sfprodisplay"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <EditText
-        android:id="@+id/etPass"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="343dp"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/shape_grey"
-        android:backgroundTint="#F8F8F8"
-        android:fontFamily="@font/sfprodisplay"
-        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/etEmail"
+        app:endIconMode="password_toggle"
+        android:background="@drawable/shape_grey"
+        android:layout_marginTop="20dp"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPass"
+            android:layout_width="343dp"
+            android:layout_height="50dp"
+            android:background="@drawable/shape_grey"
+            android:hint="Password"
+            android:paddingLeft="3dp"
+            android:fontFamily="@font/sfprodisplay"
+            android:inputType="textPassword"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btnLogin"
@@ -79,6 +90,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRegNext" />
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -50,10 +50,11 @@
         android:inputType="textPassword"
         android:fontFamily="@font/sfprodisplay"
         android:background="@drawable/shape_grey"
+        android:paddingLeft="3dp"
         android:backgroundTint="#F8F8F8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSecondPass" />
+        app:layout_constraintTop_toBottomOf="@+id/tvSecondPass"/>
 
     <Button
         android:id="@+id/btnCreateAccount"
@@ -67,7 +68,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

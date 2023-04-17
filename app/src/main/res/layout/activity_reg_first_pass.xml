@@ -34,13 +34,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/sfprodisplay"
-        android:text="Введите пароль "
+        android:text="Введите пароль  "
         android:textColor="@color/black"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
     <EditText
         android:id="@+id/etFirstPass"
         android:layout_width="343dp"
@@ -48,6 +47,7 @@
         android:layout_marginTop="20dp"
         android:inputType="textEmailAddress"
         android:fontFamily="@font/sfprodisplay"
+        android:paddingLeft="3dp"
         android:background="@drawable/shape_grey"
         android:backgroundTint="#F8F8F8"
         app:layout_constraintEnd_toEndOf="parent"
