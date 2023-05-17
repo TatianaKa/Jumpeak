@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Auth.RegFirstPassActivity">
+    tools:context=".reg.RegFirstPassActivity">
     <TextView
         android:id="@+id/tvConfirm"
         android:layout_width="wrap_content"
@@ -40,28 +40,75 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
-    <EditText
-        android:id="@+id/etFirstPass"
+    <LinearLayout
         android:layout_width="343dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
-        android:inputType="textEmailAddress"
-        android:fontFamily="@font/sfprodisplay"
-        android:paddingLeft="3dp"
-        android:background="@drawable/shape_grey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvEnterPass" />
-    <TextView
-        android:id="@+id/tvWrongPass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="30dp"
-        android:visibility="invisible"
-        android:text="😔, Похоже, неправильно введен пароль"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etFirstPass" />
+        app:layout_constraintTop_toBottomOf="@+id/tvEnterPass" >
+        <EditText
+            android:id="@+id/etFirstSymbol"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:fontFamily="@font/sfprodisplay"
+            android:paddingLeft="3dp"
+            android:hint="0"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:background="@drawable/shape_grey"/>
+        <EditText
+            android:id="@+id/etSecondSymbol"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:fontFamily="@font/sfprodisplay"
+            android:paddingLeft="3dp"
+            android:hint="1"
+            android:layout_marginLeft="20dp"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:background="@drawable/shape_grey"/>
+        <EditText
+            android:id="@+id/etThirdSymbol"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:fontFamily="@font/sfprodisplay"
+            android:paddingLeft="3dp"
+            android:inputType="number"
+            android:hint="2"
+            android:layout_marginLeft="20dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:background="@drawable/shape_grey"/>
+        <EditText
+            android:id="@+id/etFourthSymbol"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:fontFamily="@font/sfprodisplay"
+            android:paddingLeft="3dp"
+            android:inputType="number"
+            android:layout_marginLeft="20dp"
+            android:hint="3"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:background="@drawable/shape_grey"/>
+        <EditText
+            android:id="@+id/etFifthSymbol"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:fontFamily="@font/sfprodisplay"
+            android:paddingLeft="3dp"
+            android:inputType="number"
+            android:hint="4"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/shape_grey"/>
+    </LinearLayout>
+
+
     <Button
         android:id="@+id/btnFirstPass"
         android:layout_width="343dp"

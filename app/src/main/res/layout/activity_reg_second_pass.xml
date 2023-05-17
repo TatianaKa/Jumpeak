@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Auth.RegSecondPassActivity">
+    tools:context=".reg.RegSecondPassActivity">
     <TextView
         android:id="@+id/tvDreamPass"
         android:layout_width="wrap_content"
@@ -42,19 +42,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <EditText
-        android:id="@+id/etSecondPass"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPass"
         android:layout_width="343dp"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:inputType="textPassword"
-        android:fontFamily="@font/sfprodisplay"
         android:background="@drawable/shape_grey"
-        android:paddingLeft="3dp"
-        android:backgroundTint="#F8F8F8"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:endIconMode="password_toggle"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSecondPass"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvSecondPass">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSecondPass"
+            android:layout_width="343dp"
+            android:layout_height="50dp"
+            android:background="@drawable/shape_grey"
+            android:fontFamily="@font/sfprodisplay"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingLeft="3dp" />
+    </com.google.android.material.textfield.TextInputLayout>
     <TextView
         android:id="@+id/tvChangePass"
         android:layout_width="wrap_content"
@@ -64,7 +74,7 @@
         android:visibility="invisible"
         android:text="😔, Похоже, неправильно введен пароль"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etSecondPass" />
+        app:layout_constraintTop_toBottomOf="@+id/tilPass" />
 
     <Button
         android:id="@+id/btnCreateAccount"

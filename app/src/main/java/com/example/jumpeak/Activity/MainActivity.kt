@@ -1,9 +1,9 @@
-package com.example.jumpeak
+package com.example.jumpeak.Activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.TextView
+import com.example.jumpeak.R
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 

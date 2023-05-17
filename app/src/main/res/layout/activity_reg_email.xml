@@ -4,7 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Auth.RegMailActivity">
+    tools:context=".reg.RegEmailActivity">
+    <TextView
+        android:id="@+id/tvBackRegMail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="назад"
+        android:textSize="15sp"
+        android:fontFamily="@font/sfprodisplay"
+        android:textColor="@color/black"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/tvCreateAccount"
         android:layout_width="wrap_content"
@@ -14,12 +27,12 @@
         android:textColor="@color/black"
         android:textSize="15sp"
         android:fontFamily="@font/sfprodisplay"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imgRegEmail"
         android:layout_width="170dp"
         android:layout_height="170dp"
         android:layout_marginTop="50dp"
@@ -39,20 +52,29 @@
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imgRegEmail" />
 
-    <EditText
-        android:id="@+id/etRegEmail"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
         android:layout_width="343dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
-        android:inputType="textEmailAddress"
         android:background="@drawable/shape_grey"
-        android:paddingLeft="3dp"
-        android:fontFamily="@font/sfprodisplay"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvEnterEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/tvEnterEmail">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etRegEmail"
+            android:layout_width="343dp"
+            android:layout_height="50dp"
+            android:background="@drawable/shape_grey"
+            android:fontFamily="@font/sfprodisplay"
+            android:hint="email"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/tvNotFound"
@@ -63,7 +85,7 @@
         android:visibility="invisible"
         android:text="😔, Похоже, этой почты нет в нашей базе"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etRegEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
     <Button
         android:id="@+id/btnRegNext"
@@ -77,4 +99,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
