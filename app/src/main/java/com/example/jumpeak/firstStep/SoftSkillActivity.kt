@@ -11,44 +11,47 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.jumpeak.R
 import com.example.jumpeak.adapter.HardSkillAdapter
-import com.example.jumpeak.adapter.ProfessionAdapter
+import com.example.jumpeak.adapter.SoftSkillAdapter
+import com.example.jumpeak.databinding.ActivityHardSkillBinding
+import com.example.jumpeak.databinding.ActivitySoftSkillBinding
 import com.example.jumpeak.model.HardSkill
+import com.example.jumpeak.model.SoftSkill
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
-class HardSkillActivity : AppCompatActivity() , HardSkillAdapter.Listener{
+class SoftSkillActivity : AppCompatActivity() , SoftSkillAdapter.Listener{
     private lateinit var recyclerView: RecyclerView
-    private lateinit var hardskillList:ArrayList<HardSkill>
+    private lateinit var softSkillList:ArrayList<SoftSkill>
     private var db= Firebase.firestore
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_hard_skill)
+        setContentView(R.layout.activity_soft_skill)
         supportActionBar?.hide();
 
-        val tvBack=findViewById<TextView>(R.id.tvBackProfession)
-        tvBack.setOnClickListener{startActivity(Intent(this,ProfessionActivity::class.java))}
+        val tvBack=findViewById<TextView>(R.id.tvBackHardSkill)
+        tvBack.setOnClickListener{startActivity(Intent(this,HardSkillActivity::class.java))}
 
-        val btnNextActivity=findViewById<Button>(R.id.btnHardSkill)
-        btnNextActivity.setOnClickListener { startActivity(Intent(this,SoftSkillActivity::class.java)) }
+        val btnNextActivity=findViewById<Button>(R.id.btnSoftSkill)
+        btnNextActivity.setOnClickListener { startActivity(Intent(this,PlaceWorkActivity::class.java)) }
 
-        recyclerView=findViewById(R.id.rvHardSkill)
+        recyclerView=findViewById(R.id.rvSoftSkill)
         recyclerView.layoutManager= LinearLayoutManager(this)
 
-        hardskillList= arrayListOf()
+        softSkillList= arrayListOf()
         db= FirebaseFirestore.getInstance()
-        db.collection("HardSkills").get()
+        db.collection("SoftSkills").get()
             .addOnSuccessListener {
                 if(!it.isEmpty){
                     for(data in it.documents){
-                        val hardskill: HardSkill? =data.toObject(HardSkill::class.java)
-                        if(hardskill!=null){
-                            hardskillList.add(hardskill)
+                        val softSkill: SoftSkill? =data.toObject(SoftSkill::class.java)
+                        if(softSkill!=null){
+                            softSkillList.add(softSkill)
                         }
                     }
-                    recyclerView.adapter= HardSkillAdapter(hardskillList,this)
+                    recyclerView.adapter= SoftSkillAdapter(softSkillList,this)
                 }
             }
             .addOnFailureListener{
@@ -59,6 +62,6 @@ class HardSkillActivity : AppCompatActivity() , HardSkillAdapter.Listener{
                 ).show()}
 
     }
-    override fun onClick(hardskill: HardSkill) {
+    override fun onClick(softSkill: SoftSkill) {
     }
 }

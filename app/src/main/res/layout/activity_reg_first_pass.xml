@@ -41,6 +41,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
     <LinearLayout
+        android:id="@+id/llPass"
         android:layout_width="343dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
@@ -107,7 +108,6 @@
             android:layout_marginLeft="20dp"
             android:background="@drawable/shape_grey"/>
     </LinearLayout>
-
 
     <Button
         android:id="@+id/btnFirstPass"

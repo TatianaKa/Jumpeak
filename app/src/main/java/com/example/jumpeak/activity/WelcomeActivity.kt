@@ -1,4 +1,4 @@
-package com.example.jumpeak.Activity
+package com.example.jumpeak.activity
 
 import android.annotation.SuppressLint
 import android.content.Intent

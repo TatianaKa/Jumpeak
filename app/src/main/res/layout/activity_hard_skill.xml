@@ -5,5 +5,104 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".firstStep.HardSkillActivity">
+    <TextView
+        android:id="@+id/tvBackProfession"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="назад"
+        android:textSize="15sp"
+        android:fontFamily="@font/sfprodisplay"
+        android:textColor="@color/black"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tvFirstStepSubject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Шаг первый. Базовая информация"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:fontFamily="@font/sfprodisplay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tvChoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="0dp"
+        android:fontFamily="@font/sfprodisplay"
+        android:text="Какими хард-скиллами сможешь \nпохвастаться?"
+        android:textColor="@color/black"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFirstStepSubject" />
+    <TextView
+        android:id="@+id/tvChoiceOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/sfprodisplay"
+        android:gravity="left"
+        android:text="Выбери один или несколько навыков"
+        android:textColor="@color/grey"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvChoice" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilName"
+        android:layout_width="343dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_grey"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvChoiceOne">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSearchHardSkill"
+            android:layout_width="343dp"
+            android:layout_height="50dp"
+            android:background="@drawable/shape_grey"
+            android:fontFamily="@font/sfprodisplay"
+            android:hint="Введи название навыков"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvHardSkill"
+        android:layout_width="343dp"
+        android:layout_height="370dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilName"
+        tools:listitem="@layout/list_item" />
+
+    <Button
+        android:id="@+id/btnHardSkill"
+        android:layout_width="343dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/shape_grey"
+        android:backgroundTint="#F8F8F8"
+        android:fontFamily="@font/sfprodisplay"
+        android:text="Далее"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,24 +12,7 @@
         android:theme="@style/Theme.Jumpeak"
         tools:targetApi="31">
         <activity
-            android:name=".del.MainActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".reg.RegEmailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".firstStep.HardSkillActivity"
-            android:exported="false" />
-        <activity
-            android:name=".firstStep.ProfessionActivity"
-            android:exported="false" />
-        <activity
-            android:name=".firstStep.LetsGoActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".Activity.SplashScreenActivity"
+            android:name=".firstStep.SubActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,7 +20,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity
+            android:name=".firstStep.SoftSkillActivity"
+            android:exported="false" />
+        <activity
+            android:name=".firstStep.ImageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".firstStep.PlaceWorkActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.SlashActivity"
+            android:exported="false" />
+        <activity
+            android:name=".reg.RegEmailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".firstStep.HardSkillActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".firstStep.ProfessionActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".firstStep.LetsGoActivity"
+            android:exported="false" />
         <activity
             android:name=".auth.view.LoginActivity"
             android:exported="false" />
@@ -48,10 +54,10 @@
             android:name=".reg.RegFirstPassActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.WelcomeActivity"
+            android:name=".activity.WelcomeActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.MainActivity"
+            android:name=".main.MainActivity"
             android:exported="false" />
     </application>
 

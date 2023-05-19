@@ -6,6 +6,6 @@
     android:src="@drawable/logo"
     android:layout_height="400dp"
     android:layout_gravity="center"
-    tools:context=".Activity.SplashScreenActivity">
+    tools:context=".activity.SlashActivity">
 
 </ImageView>

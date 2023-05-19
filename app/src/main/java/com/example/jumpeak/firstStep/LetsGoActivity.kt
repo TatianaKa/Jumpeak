@@ -10,7 +10,9 @@ class LetsGoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lets_go)
+        supportActionBar?.hide();
+
         val btn=findViewById<Button>(R.id.btnLetsGo)
-        btn.setOnClickListener{startActivity(Intent(this,ProfessionActivity::class.java))}
+        btn.setOnClickListener{startActivity(Intent(this,SubActivity::class.java))}
     }
 }
